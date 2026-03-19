@@ -1,17 +1,225 @@
 /* =============== PC 퍼스트 =============== */
 /* =============== pc =============== */
 .wrap {
-
+    background-color: #fff;
 }
 
 header {
+    padding: 0 48px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #fff;
+}
 
+header .hdInner {
+    display: flex;
+    position: relative;
 }
 
 header .logo {
-
+    margin-top: 32px;
 }
 
 header .logo svg {
     color: #FF385C;
+}
+
+header .tab {
+    display: flex;
+    gap: 35px;
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .tab li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+header .tab li.stay {
+    gap: 16px;
+}
+
+header .tab li:not(.stay) {
+    gap: 8px;
+}
+
+/* header .tab li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 10px;
+    height: 3px;
+    background-color: #222;
+}
+
+header .tab li.active::after {
+    transform-origin: left;
+}
+
+header .tab li.stay.active::after {
+    transform: scaleX(7.776);
+}
+
+header .tab li.experience.active::after {
+    transform: scaleX(6.976);
+}
+
+header .tab li.service.active::after {
+    transform: scaleX(8.265);
+} */
+
+header .tab li .text {
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6a6a6a;
+}
+
+header .tab .img {
+    position: relative;
+}
+
+header .tab li video {
+    width: 36px;
+    height: 36px;
+    transform: scale(2);
+}
+
+header .tab li .img .new {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    padding: 3px 6px;
+    box-shadow: 0 0.953955px 1.90791px rgba(60, 77, 107, 0.25), 0 3.81582px 5.72373px rgba(60, 77, 107, 0.25), inset 0 0 2px 0.5px #001c40, inset 0 -1px 3px #d7ebff;
+    background: linear-gradient(357.5deg, #3e567c 1.59%, #3a5475 21.23%, #2d3c5b 58.6%, #809dc0 97.4%);
+    border-radius: 10px 10px 10px 2px;
+    line-height: 0.625rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.5rem;
+    color: #fff;
+}
+
+header .tab .underBar {
+    position: absolute;
+    bottom: -12px;
+    height: 3px;
+    background-color: #222;
+}
+
+header .util {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    margin-left: auto;
+}
+
+header .util .hosting {
+    padding: 11px 12px;
+    border-radius: 20px;
+}
+
+header .util .hosting:hover {
+    background-color: #f2f2f2;
+}
+
+header .util .hosting span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #222;
+}
+
+header .util div:not(.hosting) {
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .searchWrap {
+    max-width: 850px;
+    margin: 48px auto 0;
+    border: 1px solid #cacaca56;
+    border-radius: 32px;
+    box-shadow: 0 8px 16px 8px #cfcfcf56;
+    background-color: #fff;
+    position: relative;
+}
+
+header .inputWrap {
+    display: flex;
+}
+
+header .inputWrap .filter {
+    flex: 1;
+    position: relative;
+    padding: 15px 24px;
+    border-radius: 50px;
+}
+
+header .inputWrap .filter:hover {
+    background-color: #cacaca56;
+}
+
+header .inputWrap .filter:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 32px;
+    background-color: #cacaca56;
+}
+
+header .inputWrap .travel:hover+.date::before {
+    content: none;
+}
+
+header .inputWrap .date:hover::before , header .inputWrap .date:hover+.traveler::before {
+    content: none;
+}
+
+header .inputWrap .traveler:hover::before {
+    content: none;
+}
+
+header .inputWrap .title {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: #222;
+}
+
+header .inputWrap input {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 500;
+    color: #222;
+}
+
+header .search {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    background-color: #E00B41;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+header .search:hover {
+    background-color: #e81147;
 }
