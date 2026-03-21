@@ -75,24 +75,63 @@ header .tab li.service.active::after {
     transform: scaleX(8.265);
 } */
 
-header .tab li .text {
-    line-height: 1.125rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #6a6a6a;
-}
-
-header .tab .img {
+header .tab .tabImgWrap {
     position: relative;
+    transform: scale(0);
 }
 
-header .tab li video {
+header .tab li .tabImgWrap .tabImg {
+    position: relative;
     width: 36px;
     height: 36px;
+    transition: .3s;
+}
+
+header .tab li:hover .tabImgWrap .tabImg {
+    transform: scale(1.2);
+}
+
+header .tab li .tabImgWrap video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     transform: scale(2);
 }
 
-header .tab li .img .new {
+/* header .tab li .tabImg .twirl ,
+header .tab li.active .tabImg .twirlSelected,
+header .tab li.clickActive .tabImg .selected {
+    display: block;
+}
+
+header .tab li.clickActive .tabImg .twirl ,
+header .tab li.clickActive .tabImg .twirlSelected ,
+header .tab li.active .tabImg .twirl ,
+header .tab li.active .tabImg .selected ,
+header .tab li .tabImg .twirlSelected , 
+header .tab li .tabImg .selected {
+    display: none;
+} */
+
+header .tab li video {
+    display: none;
+}
+
+header .tab li:not(.active) .twirl {
+    display: block;
+}
+
+header .tab li.active:not(.playSelected) .twirlSelected {
+    display: block;
+}
+
+header .tab li.active.playSelected .selected {
+    display: block;
+}
+
+header .tab li .tabImg .new {
     position: absolute;
     left: 100%;
     top: -10px;
@@ -107,8 +146,22 @@ header .tab li .img .new {
     color: #fff;
 }
 
+header .tab li .text {
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6a6a6a;
+    position: relative;
+    z-index: 1;
+}
+
+header .tab li .text:hover , header .tab li.active .text {
+    color: #222;
+}
+
 header .tab .underBar {
     position: absolute;
+    left: 0;
     bottom: -12px;
     height: 3px;
     background-color: #222;
