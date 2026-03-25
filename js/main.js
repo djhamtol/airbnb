@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     mainView.tabScale();
     mainView.tabAnimation();
+    mainView.menuBtn();
 });
 
 const mainView = {
@@ -42,7 +43,7 @@ const mainView = {
         
         // tab 클릭시 underBar, active, video 변화
         lis.forEach((li,i) => {
-            li.addEventListener('click', (e) => {
+            li.addEventListener('click', () => {
                 gsap.to(underBar, {
                     x: li.offsetLeft, //offsetLeft: position- relative / absolute / fixed인 부모 기준(absolute left랑 같은건데 자식에 absolute설정 안되어 있어도 됨)
                     width: li.offsetWidth, //offsetWidth: 요소의 w
@@ -89,8 +90,22 @@ const mainView = {
         //     })
         //     li.classList.add('active');
         // });
+    },
+
+    menuBtn() {
+        const menu = document.querySelector('.util .menu');
+        const menuBtn = menu.querySelector('.menuBtn');
+        const dropMenu = menu.querySelector('.dropDownWrap');
+
+        menuBtn.addEventListener('click', () => {
+            if(dropMenu.hidden === true) {
+                dropMenu.hidden = false;
+                dropMenu.setAttribute('aria-label', '메뉴 닫기');
+            } else {
+                dropMenu.hidden = true;
+                dropMenu.setAttribute('aria-label', '메뉴 열기');
+            };
+        });
     }
-
-
 
 };

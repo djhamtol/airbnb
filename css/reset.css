@@ -40,8 +40,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.43;
 	font-family: Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	color: #222;
+	font-size: 0.875rem;
 }
 ol, ul {
 	list-style: none;
@@ -61,6 +63,11 @@ table {
 button {
 	border: 0;
 	cursor: pointer;
+    background-color: transparent;
+}
+
+input, textarea, select, button {
+	font: inherit;
 }
 
 /* utility */
