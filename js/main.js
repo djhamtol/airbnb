@@ -561,7 +561,7 @@ const mainView = {
             const nextBtn = stayList.querySelector('.swiper-button-next');
 
             new Swiper(staySwiper, {
-                slidesPerView: 2,
+                slidesPerView: 2.1,
                 spaceBetween: 12,
                 navigation: {
                     nextEl: nextBtn,
