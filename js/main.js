@@ -64,7 +64,7 @@ const mainView = {
     // tab 애니메이션
     tabAnimation() {
         const lis = document.querySelectorAll('.tab li');
-        const underBar = document.querySelector('.tab .underBar');
+        const underBar = document.querySelector('.underBar');
 
         const rawIdx = sessionStorage.getItem('activeIdx');
         const activeIdx = rawIdx !== null ? Number(rawIdx) : 0; //기억된 값 없으면 0으로 초기화
