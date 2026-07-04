@@ -100,21 +100,21 @@
                     <span>검색을 시작해 보세요</span>
                 </button>
             </div>
-            <div class="searchStandard">
+            <form class="searchStandard">
                 <div class="searchWrap">
                     <div class="filterWrap">
                         <div class="highlight" hidden></div>
                         <div class="filter travel">
                             <div class="title">여행지</div>
-                            <input type="search" class="search" placeholder="여행지 검색">
+                            <input type="search" class="search" placeholder="여행지 검색" aria-label="여행지">
                         </div>
                         <div class="filter date">
                             <div class="title">날짜</div>
-                            <input type="text" id="datePicker" class="search" placeholder="날짜 추가">
+                            <input type="text" id="datePicker" class="search" placeholder="날짜 추가" aria-label="날짜">
                         </div>
                         <div class="filter traveler">
                             <div class="title">여행자</div>
-                            <input type="search" class="search" placeholder="게스트 추가" readonly>
+                            <input type="search" class="search" placeholder="게스트 추가" aria-label="여행자" readonly>
                         </div>
                         <div class="filterDp">
                             <div class="dp travelDp">
@@ -263,14 +263,14 @@
                             </div>
                         </div>
                     </div>
-                    <button class="searchBtn">
+                    <button type="button" class="searchBtn" aria-label="검색">
                         <svg viewBox="0 0 32 32" style="height: 16px; width: 16px; stroke: #fff; stroke-width: 4; overflow: visible;">
                             <path d="m20.666 20.666 10 10"></path>
                             <path d="m24.0002 12.6668c0 6.2593-5.0741 11.3334-11.3334 11.3334-6.2592 0-11.3333-5.0741-11.3333-11.3334 0-6.2592 5.0741-11.3333 11.3333-11.3333 6.2593 0 11.3334 5.0741 11.3334 11.3333z" fill="none"></path>
                         </svg>
                     </button>
                 </div>
-            </div>
+            </form>
             <div class="miniStandard">
                 <div class="miniSearchWrap">
                     <div class="miniFilter">
