@@ -602,7 +602,7 @@ const mainView = {
         init() {
             this.caches.common = {
                 header: document.querySelector('header'),
-                tab: document.querySelector('.tab')
+                tab: document.querySelector('.tabWrap')
             };
 
             this.caches.pc = {
